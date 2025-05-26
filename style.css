@@ -30,6 +30,7 @@ body {
   z-index: 1000;
 }
 .splash-content {
+  color: black;
   background: #fff;
   padding: 40px;
   border-radius: 20px;
