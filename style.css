@@ -1,4 +1,4 @@
-body {
+/* body {
   display: flex;
   flex-direction: column;
   font-family: "Segoe UI", sans-serif;
@@ -83,4 +83,47 @@ main {
 #footerSec {
   padding: 20px;
   color: red;
+} */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fdf6f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  color: #b76e79;
+  margin-bottom: 0.5rem;
+}
+
+.couple-names h2 {
+  font-size: 2rem;
+  color: #8b4e56;
+  margin: 1rem 0;
+}
+
+p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.closing {
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+.thanks {
+  margin-top: 1.5rem;
+  font-weight: bold;
 }
