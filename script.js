@@ -1,29 +1,22 @@
-let data = [];
+// Countdown logic
+const countdownElement = document.getElementById("countdown");
+const weddingDate = new Date("2025-09-07T09:00:00").getTime();
 
-document.getElementById("simpanBtn").addEventListener("click", function () {
-  const namaInput = document.getElementById("namaInput");
-  const nama = namaInput.value.trim();
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
 
-  if (nama === "") {
-    alert("Nama tidak boleh kosong!");
-    return;
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hrs = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+  countdownElement.innerHTML = `${days} Hari ${hrs} Jam ${mins} Menit ${secs} Detik`;
+
+  if (distance < 0) {
+    clearInterval(timer);
+    countdownElement.innerHTML = "Acara telah berlangsung";
   }
-
-  data.push(nama);
-  namaInput.value = "";
-  tampilkanData();
-});
-
-function tampilkanData() {
-  const tbody = document.getElementById("tabelBody");
-  tbody.innerHTML = "";
-
-  data.forEach((nama, index) => {
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${index + 1}</td>
-      <td>${nama}</td>
-    `;
-    tbody.appendChild(tr);
-  });
 }
+
+const timer = setInterval(updateCountdown, 1000);
