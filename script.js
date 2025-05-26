@@ -1,12 +1,15 @@
-const btn = document.getElementById("bukaUndangan");
-const musik = document.getElementById("music");
-const splash = document.getElementById("splash");
-const card = document.getElementById("card");
+document.getElementById("bukaUndangan").addEventListener("click", function () {
+  // Sembunyikan splash
+  document.getElementById("splash").style.display = "none";
 
-btn.addEventListener("click", () => {
-  splash.style.display = "none";
-  musik.muted = false;
-  musik.play().catch((e) => {
-    console.log("Gagal memutar musik:", e);
+  // Play music
+  const music = document.getElementById("music");
+  music.play().catch(() => {
+    console.log("Autoplay diblokir, harus interaksi user.");
   });
+
+  // Tampilkan dan animasikan card
+  const card = document.querySelector(".card");
+  card.style.opacity = "1";
+  card.style.transform = "translateY(0)";
 });
