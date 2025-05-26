@@ -13,6 +13,7 @@ document.getElementById("bukaUndangan").addEventListener("click", function () {
   card.style.opacity = "1";
   card.style.transform = "translateY(0)";
 
+  // animasi bunga
   const leafContainer = document.querySelector(".falling-leaves");
   const emojis = ["🌸", "🌼", "🍁", "🌺", "🌹"];
 
