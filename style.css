@@ -1,9 +1,12 @@
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Segoe UI", sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
   text-align: center;
+  min-height: 100vh;
 }
 
 header {
@@ -71,4 +74,13 @@ th {
   background-color: #007bff;
   color: white;
   text-align: left;
+}
+
+main {
+  flex: 1;
+}
+
+#footerSec {
+  padding: 20px;
+  color: red;
 }
