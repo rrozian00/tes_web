@@ -39,7 +39,7 @@ body {
 
 .splash-content h2 {
   font-family: "Great Vibes", cursive;
-  font-size: 48px;
+  font-size: 40px;
   color: #c47135;
   margin-bottom: 10px;
 }
@@ -191,11 +191,9 @@ body {
     padding: 1rem;
   }
   .opening {
-    font-size: 14px;
-  }
-  .event-details {
     font-size: 12px;
   }
+
   .card {
     padding: 1.5rem;
   }
@@ -204,14 +202,14 @@ body {
     padding: 15px;
   }
   .undangan-splash {
-    font-size: 18px;
+    font-size: 5px;
   }
 
   .couple-names {
-    font-size: 22px;
+    font-size: 20px;
   }
   .closing {
-    font-size: 14px;
+    font-size: 12px;
   }
   .judul {
     font-size: 1.7rem;
