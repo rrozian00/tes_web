@@ -14,14 +14,14 @@ document.getElementById("bukaUndangan").addEventListener("click", function () {
   card.style.transform = "translateY(0)";
 
   const leafContainer = document.querySelector(".falling-leaves");
-  const emojis = ["🌸", "🌼", "🍁", "🌺", "🍂", "🌹"];
+  const emojis = ["🌸", "🌼", "🍁", "🌺", "🌹"];
 
   for (let i = 0; i < 30; i++) {
     const leaf = document.createElement("span");
     leaf.innerText = emojis[Math.floor(Math.random() * emojis.length)];
     leaf.style.left = Math.random() * 100 + "vw";
     leaf.style.animationDuration = 5 + Math.random() * 5 + "s";
-    leaf.style.fontSize = 16 + Math.random() * 24 + "px";
+    leaf.style.fontSize = 14 + Math.random() * 22 + "px";
     leafContainer.appendChild(leaf);
   }
 });
