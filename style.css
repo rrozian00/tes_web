@@ -142,7 +142,6 @@ body {
   display: block;
   margin-top: 0.5rem;
 }
-
 .falling-leaves {
   pointer-events: none;
   position: fixed;
@@ -153,23 +152,24 @@ body {
   overflow: hidden;
   z-index: 10;
 }
-.falling-leaves::before {
-  content: "🍁🌸";
+
+.falling-leaves span {
   position: absolute;
+  top: -50px;
   font-size: 1.5rem;
-  animation: fall 10s linear infinite;
-  left: 50%;
-  top: -5%;
-  animation-delay: 0s;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0.8;
 }
 @keyframes fall {
   0% {
-    transform: translateX(0) rotate(0deg);
-    top: -5%;
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
   }
   100% {
-    transform: translateX(300px) rotate(360deg);
-    top: 105%;
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
   }
 }
 
