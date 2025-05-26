@@ -1,129 +1,109 @@
-/* body {
-  display: flex;
-  flex-direction: column;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f4f4f4;
+/* Fonts dan reset */
+* {
   margin: 0;
   padding: 0;
-  text-align: center;
-  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #007bff;
-  color: white;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  width: 60px;
-  margin-right: 15px;
-  border-radius: 8px;
-}
-
-.form-section {
-  margin: 30px 0;
-}
-
-#namaInput {
-  padding: 10px;
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-#simpanBtn {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  margin-left: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#simpanBtn:hover {
-  background-color: #218838;
-}
-
-.table-section {
-  width: 75%;
-  margin: 0 auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-th,
-td {
-  padding: 12px;
-  border: 1px solid #ddd;
-}
-
-th {
-  background-color: #007bff;
-  color: white;
-  text-align: left;
-}
-
-main {
-  flex: 1;
-}
-
-#footerSec {
-  padding: 20px;
-  color: red;
-} */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #fdf6f0;
+  font-family: "Playfair Display", serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1523413651479-597eb2da0ad6")
+      no-repeat center center/cover;
+  color: #fff;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  position: relative;
 }
 
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Kartu undangan */
 .card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffd700;
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
   max-width: 600px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.judul {
+  font-size: 2.5rem;
+  color: #ffd700;
   text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
-h1 {
-  color: #b76e79;
-  margin-bottom: 0.5rem;
-}
-
-.couple-names h2 {
-  font-size: 2rem;
-  color: #8b4e56;
+.opening,
+.closing,
+.event-details p {
+  text-align: center;
   margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #f3f3f3;
 }
 
-p {
-  color: #444;
-  line-height: 1.6;
+.couple-names {
+  display: flex;
+  flex-direction: column;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3rem;
+  color: #ffd700;
+  text-align: center;
+  margin: 2rem 0;
 }
 
-.closing {
-  margin-top: 2rem;
-  font-style: italic;
+.couple-names .and {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+.event-details {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  color: #fff9dc;
+  text-align: center;
 }
 
 .thanks {
-  margin-top: 1.5rem;
-  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: #fdf4e3;
+}
+
+.signature {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  color: #ffd700;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
