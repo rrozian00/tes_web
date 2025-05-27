@@ -17,7 +17,7 @@ document.getElementById("bukaUndangan").addEventListener("click", function () {
   const leafContainer = document.querySelector(".falling-leaves");
   const emojis = ["🌸", "🌼", "🍁", "🌺", "🌹"];
 
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 10; i++) {
     const leaf = document.createElement("span");
     leaf.innerText = emojis[Math.floor(Math.random() * emojis.length)];
     leaf.style.left = Math.random() * 100 + "vw";
