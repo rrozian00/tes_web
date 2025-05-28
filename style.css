@@ -8,7 +8,7 @@
 body {
   font-family: "Playfair Display", serif;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("bg.jpeg") no-repeat center center/cover;
+    url("/assets/images/bg.jpeg") no-repeat center center/cover;
   color: #fff;
   height: 100vh;
   display: flex;
@@ -111,7 +111,7 @@ body {
 .couple-names {
   display: flex;
   flex-direction: column;
-  font-family: "Playfair Display", serif;
+  font-family: "Great Vibes", cursive;
   font-weight: 600;
   font-size: 2rem;
   color: #ffd700;
