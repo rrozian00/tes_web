@@ -111,7 +111,7 @@ body {
 .couple-names {
   display: flex;
   flex-direction: column;
-  font-family: "Great Vibes", cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 600;
   font-size: 2rem;
   color: #ffd700;
